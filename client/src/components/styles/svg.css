@@ -1,0 +1,95 @@
+.searchIcon {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+  position: relative;
+  float: left;
+  top: -40px;
+  left: 5px;
+}
+
+.flag {
+  enable-background: new 0 0 60 60;
+  height: 1.2em;
+  width : 1.2em;
+  display: block;
+  fill: currentColor;
+}
+
+.close {
+  margin-bottom: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: buttontext;
+  border: 0px;
+  height: 16px;
+  width: 16px;
+  fill: rgb(118, 118, 118);
+  outline: none;
+}
+
+.searchClose {
+  margin-bottom: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: buttontext;
+  border: 0px;
+  height: 12px;
+  width: 12px;
+  fill: rgb(150, 147, 147);
+  outline: none;
+}
+
+.nextButton {
+  color: #008489 !important;
+  enable-background: new 0 0 41.999 41.999;
+  height: 7px;
+  width: 7px;
+  display: block;
+  fill: currentColor;
+  padding-bottom: 6px;
+  position: relative;
+  top: 4px;
+}
+
+.superUser {
+  height: 24px;
+  width: 24px;
+  fill: currentcolor;
+}
+
+.star {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  fill: currentColor;
+  color: #008489;
+  margin-left: 5px;
+}
+
+.emptyStar {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  fill: currentColor;
+  color: #008489;
+  fill-opacity: .3;
+  margin-left: 5px;
+}
+.halfStar {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  fill: url(#half);
+  margin-left: 5px;
+}
+
+.radio {
+  height: 6px;
+  width: 6px;
+  display: block;
+  fill: rgb(0, 132, 137);
+  position: relative;
+  left: 5px;
+  top: 5px;
+}

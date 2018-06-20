@@ -1,0 +1,89 @@
+.review {
+  font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  margin-top: -10px;
+}
+
+.reviewHeader {
+  width: 100%;
+  vertical-align: top;
+  margin: 0 0 15px 60px;
+  position: relative;
+  left: 10px;
+  top: -8px;
+}
+
+.guestName {
+  font-weight: 600;
+  color: #484848;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.photoAndSuperUser {
+  position: relative;
+  left: 7px;
+  top: 10px;
+}
+
+.superUser {
+  z-index: 1;
+  position: relative;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 23px;
+}
+
+.guestPhoto {
+  float: left;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.date {
+  margin: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #484848;
+  font-weight: normal;
+}
+
+
+.report {
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+  color: buttontext;
+  border: 0px;
+  left: 580px;
+  top: 5px;
+}
+
+.reviewText {
+  margin-top: 16px;
+  color: #484848;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  margin: 0px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+.bottomSpace {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.bottomBorder {
+  border-bottom: 1px solid #DBDBDB;
+}
+

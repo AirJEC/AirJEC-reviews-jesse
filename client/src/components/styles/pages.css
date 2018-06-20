@@ -1,0 +1,54 @@
+.pagesContainer {
+  display: inline-block;
+}
+
+.pages {
+  height: 20px;
+}
+
+.pageButton {
+  color: #008489;
+  background-color: #edefed;
+  cursor: default;
+  float: left;
+  padding: 10px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid #c4c4c4;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  outline: none;
+}
+
+.pageButton:disabled {
+    color: #484848;
+    background-color: #edefed;
+    cursor: default;
+}
+
+.dots {
+  background-color: #edefed;
+  cursor: default;
+  float: left;
+  padding: 10px 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  border: 1px solid #c4c4c4;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 0px;
+  color: black;
+  position: relative;
+  top: -5px;
+  margin-left: 3px;
+  margin-right: -5px;
+  font-size: 12px
+}

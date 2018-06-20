@@ -1,0 +1,7 @@
+node_modules
+config.js
+reviewBundle.js
+coverage
+mysqlConfig.js
+db_backup.sql
+database/mysqlConfig.js

@@ -1,0 +1,16 @@
+body {
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #484848;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fullContainer {
+  max-width: 648px;
+}
+
+.searchBold {
+  font-weight: 700;
+}

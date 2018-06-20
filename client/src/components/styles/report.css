@@ -1,0 +1,200 @@
+.reportContainer {
+  position: fixed;
+  z-index: 2000;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow-y: auto;
+}
+
+.reportBackground {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.reportPadding {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 64px;
+}
+
+.reportMain {
+  background-color: rgb(255, 255, 255);
+  padding: 32px;
+  width: 504px;
+  height: 413px;
+  position: relative;
+  margin: auto;
+}
+
+.close {
+  margin-bottom: 24px;
+  cursor: pointer;
+  background-color: transparent;
+  color: buttontext;
+  border: 0px;
+  height: 16px;
+  width: 16px;
+  fill: rgb(118, 118, 118);
+  outline: none;
+}
+
+.reportTitle {
+  font-weight: 700;
+  margin: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #484848;
+  padding-bottom: 24px;
+}
+
+.chooseFollowing {
+  font-weight: 500;
+   margin: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #484848;
+}
+
+.readMore {
+  color: #008489;
+  font: inherit;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  text-decoration: none;
+  background: transparent;
+  border: 0px;
+  cursor: pointer;
+  margin: 0px;
+  padding: 0px;
+  user-select: auto;
+  text-align: left;
+}
+
+.reportContent {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+
+.labelContainer {
+  margin-bottom: 10px;
+}
+
+.labelTitle {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: rgb(72, 72, 72);
+  font-weight: normal;
+  cursor: pointer;
+  white-space: normal;
+  vertical-align: top;
+  display: inline-block;
+  padding-left: 12px;
+}
+
+.labelContent {
+  font-weight: normal;
+  cursor: pointer;
+  white-space: normal;
+  vertical-align: top;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 13.5px;
+  line-height: 18px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  color: rgb(72, 72, 72);
+  position: relative;
+  left: 35px;
+}
+
+.radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioButton {
+  display: inline-block;
+  height: 16px;
+  margin-top: 2px;
+  vertical-align: top;
+  width: 16px;
+  background: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(219, 219, 219);
+  border-image: initial;
+  border-radius: 50%;
+}
+
+.radio:checked ~ .radioButton {
+  border-color: #008489;
+}
+
+#submitReport {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition-property: background, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  width: auto;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 800;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-width: 77.6656px;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  background: rgb(0, 132, 137);
+  border-color: transparent;
+  top: 15px;
+}
+
+#submitReport:disabled {
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  transition-property: background, border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  width: auto;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 800;
+  padding-left: 24px;
+  padding-right: 24px;
+  min-width: 77.6656px;
+  color: rgb(255, 255, 255);
+  margin: 0px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-width: 2px;
+  border-style: solid;
+  top: 15px;
+  color: rgb(255, 255, 255);
+  cursor: default;
+  background: rgba(0, 132, 137, 0.3);
+  border-color: transparent;
+}

@@ -1,0 +1,25 @@
+.ratings {
+  width: 664px;
+  height: 106px;
+  margin: -8px;
+  margin-bottom: 70px;
+}
+
+.accComCle {
+  width: 40%;
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  top: 33px;
+}
+
+.locCheVal {
+  width: 40%;
+  float: right;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  top: -25px;
+  left: -50px;
+}

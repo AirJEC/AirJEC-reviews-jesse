@@ -1,0 +1,67 @@
+.tyContainer {
+  position: fixed;
+  z-index: 2000;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: auto;
+}
+
+.tyContainerBackground {
+  display: table;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.tyPadding {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 64px;
+}
+
+.reportTy {
+  background-color: rgb(255, 255, 255);
+  max-width: 568px;
+  height: 244px;
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.tyInnerPadding {
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  padding: 32px;
+}
+
+.thankyouClose {
+  cursor: pointer;
+  background-color: transparent;
+  color: buttontext;
+  border: 0px;
+  outline: none;
+}
+
+.thankyou {
+  font-weight: 600;
+  margin: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  padding-top: -5px;
+  padding-bottom: 20px;
+  color: #484848;
+}
+
+.thankyouText {
+  font-weight: 600;
+  margin: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  line-height: 22px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #484848;
+}

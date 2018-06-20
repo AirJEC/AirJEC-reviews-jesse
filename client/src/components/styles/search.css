@@ -1,0 +1,98 @@
+.totalReviews {
+  width: 66.66666666666666%;
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 4px;
+  position: relative;
+  background-color: white;
+}
+
+.totalReviewsWords {
+  font-weight: 700;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #484848;
+  margin-right: 10px;
+}
+
+.totalReviewStars {
+  display: inline-block;
+}
+
+.star {
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  float: right;
+  left: -165px;
+  top: 7px;
+}
+
+.searchContainer {
+  width: 203px;
+  float: right;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+  height: 56px;
+  top: -40px;
+  left: 7px;
+}
+
+.searchContainer1 {
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 8px;
+  width: 203px;
+  height: 34px;
+  border-radius: 2px;
+}
+.searchContainer2 {
+  overflow: hidden;
+  position: relative;
+}
+
+.searchInput {
+  border-width: 1px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-color: rgb(219, 219, 219);
+  width: 203px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 7px;
+  color: #484848;
+  font-weight: 600;
+  padding-left: 25px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: rgb(0, 132, 137);
+}
+
+.borders {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.innerBorder {
+  border-bottom: 1px solid #DBDBDB !important;
+  width: 648px;
+  position: relative;
+  top: 55px;
+}
+
+.close {
+  position: relative;
+  left: 180px;
+  top: -23px;
+  height: 15px;
+  width: 15px;
+}
