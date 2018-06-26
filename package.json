@@ -7,7 +7,9 @@
     "test": "jest",
     "react-dev": "webpack -d --watch",
     "test:coverage": "jest --coverage",
-    "react-production": "webpack -p --watch"
+    "react-production": "webpack -p --watch",
+    "seed-postgres": "node data/postgresGen.js && psql airfec_reviews < data/postgres/postgres.sql",
+    "seed-cassandra": "node data/cassandra_seed.js"
   },
   "repository": {
     "type": "git",
@@ -24,10 +26,13 @@
     "axios": "^0.18.0",
     "babel-preset-airbnb": "^2.4.0",
     "body-parser": "^1.18.3",
+    "cassandra-driver": "^3.5.0",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "faker": "^4.1.0",
     "mysql": "^2.15.0",
     "node-uuid": "^1.4.8",
+    "pg": "^7.4.3",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
