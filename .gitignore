@@ -5,3 +5,6 @@ coverage
 mysqlConfig.js
 db_backup.sql
 database/mysqlConfig.js
+data/postgres/listings.txt
+data/postgres/reviews.txt
+data/postgres/users.txt
