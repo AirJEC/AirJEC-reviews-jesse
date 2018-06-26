@@ -30,6 +30,36 @@ app.get('/reviews/:id', (req, res) => {
   });
 });
 
+app.post('/reviews/:id', (req, res) => {
+  db.postData(req.params.id, (err, data) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(201).send(data);
+    }
+  });
+});
+
+app.put('/reviews/:id', (req, res) => {
+  db.putData(req.params.id, (err, data) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(204).send(data);
+    }
+  });
+});
+
+app.delete('/reviews/:id', (req, res) => {
+  db.deleteData(req.params.id, (err, data) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.status(204).send(data);
+    }
+  });
+});
+
 app.get('/photos', (req, res) => {
   helper.getPhotos((err, photos) => {
     if (err) {
