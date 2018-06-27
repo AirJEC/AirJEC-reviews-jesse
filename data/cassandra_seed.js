@@ -36,19 +36,6 @@ client.connect((err) => {
   }
 });
 
-// let batch = 0;
-
-// while (batch < 50000) {
-//   let queries = makeQueries();
-
-//   client.batch(queries, { prepare: true })
-//     .then(() => null)
-//     .catch(err => console.log('Error:', err));
-//   batch += 1;
-//   queries = null;
-//   console.log('batch number', batch);
-// }
-
 const addToDb = (batch) => {
   if (batch === 1000001) {
     return;
@@ -65,6 +52,5 @@ const addToDb = (batch) => {
 };
 
 addToDb(1);
-
 
 console.log('Done!');
