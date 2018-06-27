@@ -28,7 +28,7 @@ const getData = (id, callback) => {
 };
 
 const postData = (params, callback) => {
-  client.query(`QUERY`, `PARAMS`, (err, res) => {
+  client.query(`INSERT INTO reviews (review_text, accuracy_rating, communication_rating, cleanliness_rating, location_rating, checkin_rating, value_rating, user_id, listing_id, review_date) VALUES ('${params.review_text}', ${params.accuracy_rating}, ${params.communication_rating}, ${params.cleanliness_rating}, ${params.location_rating}, ${params.checkin_rating}, ${params.value_rating}, ${params.user_id}, ${params.listing_id}, '${params.review_date}');`, (err, res) => {
     if (err) {
       callback(err);
     } else {
