@@ -10,7 +10,10 @@ CREATE TABLE users (
 
 CREATE TABLE listings (
   id SERIAL PRIMARY KEY,
-  address varchar(100)
+  address VARCHAR(100),
+  host_name VARCHAR(250),
+  host_photo VARCHAR(500),
+  host_text TEXT
 );
 
 CREATE TABLE reviews (

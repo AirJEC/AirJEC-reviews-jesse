@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const db = require('../database/index');
-const helper = require('../s3Helpers/getPhotos');
+const db = require('../database/postgres');
+// const helper = require('../s3Helpers/getPhotos');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -31,7 +31,7 @@ app.get('/reviews/:id', (req, res) => {
 });
 
 app.post('/reviews/:id', (req, res) => {
-  db.postData(req.params.id, (err, data) => {
+  db.postData(req.body, (err, data) => {
     if (err) {
       res.status(400).send(err);
     } else {
@@ -60,16 +60,16 @@ app.delete('/reviews/:id', (req, res) => {
   });
 });
 
-app.get('/photos', (req, res) => {
-  helper.getPhotos((err, photos) => {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      db.addPhotos(photos);
-      res.status(200).send('sucessfully added photos');
-    }
-  });
-});
+// app.get('/photos', (req, res) => {
+//   helper.getPhotos((err, photos) => {
+//     if (err) {
+//       res.status(400).send(err);
+//     } else {
+//       db.addPhotos(photos);
+//       res.status(200).send('sucessfully added photos');
+//     }
+//   });
+// });
 
 // uncomment this to input photos into your mysql database, only needs to be run once
 // helper.inputPhotos();
