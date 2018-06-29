@@ -1,0 +1,11 @@
+config:
+  target: 'http://localhost:3001'
+  phases: 
+    - duration: 300
+      arrivalRate: 350
+  processor: './artillery.js'
+scenarios:
+  - flow:
+    - function: 'rng'
+    - get:
+        url: "/reviews/{{ listingId }}"
