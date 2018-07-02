@@ -8,3 +8,5 @@ database/mysqlConfig.js
 data/postgres/listings.txt
 data/postgres/reviews.txt
 data/postgres/users.txt
+newrelic_agent.log
+newrelic.js

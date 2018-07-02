@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS listings;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  username VARCHAR(50),
-  user_img VARCHAR(150)
+  guest_name VARCHAR(50),
+  guest_photo VARCHAR(150)
 );
 
 CREATE TABLE listings (
@@ -18,7 +18,7 @@ CREATE TABLE listings (
 
 CREATE TABLE reviews (
   id SERIAL PRIMARY KEY,
-  body VARCHAR(600),
+  review_text VARCHAR(600),
   accuracy_rating INTEGER,
   communication_rating INTEGER,
   cleanliness_rating INTEGER,
@@ -27,7 +27,7 @@ CREATE TABLE reviews (
   value_rating INTEGER,
   user_id INTEGER REFERENCES users(id),
   listing_id INTEGER REFERENCES listings(id),
-  date_submitted VARCHAR(40)
+  review_date VARCHAR(40)
 );
 
 COPY users (username, user_img)

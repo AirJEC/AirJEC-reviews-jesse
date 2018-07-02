@@ -136,7 +136,10 @@ class Review extends React.Component {
       11: 'November',
       12: 'December',
     };
-    const date = review.review_date.split('/');
+    const dateObj = new Date(review.review_date);
+    const dateMonth = dateObj.getMonth() + 1 < 10 ? `0${dateObj.getMonth() + 1}` : dateObj.getMonth() + 1;
+    const date = [dateObj.getDate(), dateMonth];
+
     const formatedDate = `${month[date[1]]} ${date[0]}`;
 
     const hostResponse = review.id % 10 === 0 ?
