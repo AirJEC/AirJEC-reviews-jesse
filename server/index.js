@@ -3,14 +3,18 @@ const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
-
 const bodyParser = require('body-parser');
 const db = require('../database/postgres');
+const redis = require('redis');
+
+const app = express();
+const port = process.env.PORT || 3001;
+const client = redis.createClient();
+
 
 if (cluster.isMaster) {
   console.log(`Master ${process.pid} is running`);
 
-  // Fork workers.
   for (let i = 0; i < numCPUs; i += 1) {
     cluster.fork();
   }
@@ -19,8 +23,21 @@ if (cluster.isMaster) {
     console.log(`worker ${worker.process.pid} died`);
   });
 } else {
-  const app = express();
-  const port = process.env.PORT || 3001;
+  client.on('error', err => console.log('Error:', err));
+
+  const cache = (req, res, next) => {
+    const { id } = req.params;
+
+    client.get(id, (err, data) => {
+      if (err) throw err;
+
+      if (data !== null) {
+        res.send(data);
+      } else {
+        next();
+      }
+    });
+  };
 
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,12 +52,13 @@ if (cluster.isMaster) {
 
   app.use('/rooms/:id', express.static(path.join(__dirname, '../public/dist/')));
 
-  app.get('/reviews/:id', (req, res) => {
+  app.get('/reviews/:id', cache, (req, res) => {
     db.getData(req.params.id, (err, data) => {
       if (err) {
         res.status(400).send(err);
       } else {
-        res.status(200).send(data);
+        client.setex(req.params.id, 60, JSON.stringify(data));
+        res.send(data);
       }
     });
   });
@@ -75,7 +93,8 @@ if (cluster.isMaster) {
     });
   });
 
-  app.listen(port, () => {
+  module.exports = app.listen(port, () => {
     console.log('server listening on port ', port);
   });
 }
+
