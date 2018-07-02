@@ -18,8 +18,5 @@ describe('Server', () => {
           done();
         });
     });
-    // it('Should post review data to PostgreSQL', () => {
-    //   chai.expect(1).to.eql(1);
-    // });
   });
 });
